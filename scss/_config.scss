@@ -1,0 +1,113 @@
+$bg-color: #0A0A0A;
+$primary-color: #8C8C8C;
+$secondary-color: #4D4EFF;
+$lt-black: #111111;
+
+$danger-color: #fa2749;
+
+
+
+@font-face {
+  font-family: 'Antikor Mono';
+  src: url('../fonts/Antikor-Mono-ExtraLight.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/Antikor-Mono-ExtraLight.ttf')  format('truetype'); /* Safari, Android, iOS */
+
+}
+@font-face {
+  font-family: 'Antikor Mono';
+  src: url('../fonts/Antikor-Mono-Hairline.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/Antikor-Mono-Hairline.ttf')  format('truetype'); /* Safari, Android, iOS */
+       font-weight: 100;
+       
+}
+
+/*@font-face {
+  font-family: 'Antikor Mono';
+  src: url("fonts/DejaVuSans-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Antikor Mono';
+  src: url("fonts/DejaVuSans-Oblique.ttf");
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: 'Antikor Mono';
+  src: url("fonts/DejaVuSans-BoldOblique.ttf");
+  font-weight: bold;
+  font-style: italic, oblique;
+}*/
+
+
+
+
+
+
+
+$font-stack: 'Antikor Mono',
+Arial,
+Helvetica,
+sans-serif;
+
+
+//black div bg
+.bl-cont {
+  background-color: $lt-black;
+  padding: 15px 15px 15px 15px;
+}
+
+
+//cursor
+$cursor-size: 20px;
+
+#cursor {
+  z-index: 11000;
+  right: 0;
+  top: 0;
+
+  border-radius: 50%;
+  background-color: $secondary-color;
+  width: 20px;
+  height: 20px;
+
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  position: fixed;
+
+
+  transition: linear height 0.25s, linear width 0.25s;
+  -webkit-transition: linear height 0.25s, linear width 0.25s;
+  -moz-transition: linear height 0.25s, linear width 0.25s;
+  -o-transition: linear height 0.25s, linear width 0.25s;
+
+
+}
+
+.hoveredCursor {
+  width: 10px !important;
+  height: $cursor-size !important;
+  background-color: $primary-color !important;
+  border-radius: 0 !important;
+
+  //blink with a continuous transition
+  //animation: blinker 1.5s linear infinite;
+
+  //blink w/out a continuous transition
+  animation: blinker 1.5s steps(5, start) infinite;
+  -webkit-animation: blinker 1.5s steps(5, start) infinite;
+
+}
+
+
+@keyframes blinker {
+  30% {
+    opacity: .25;
+  }
+
+  60% {
+    opacity: 1;
+  }
+}
+
+
+

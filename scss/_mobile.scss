@@ -1,0 +1,93 @@
+/*
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+*/
+
+
+
+
+
+
+/* Xl Desktop devices */
+@media (min-width: 1200px) {
+    .display-1 {
+        font-size: 5.5rem;
+    }
+
+    #main {
+        padding-right: var(--bs-gutter-x, 1.75rem);
+        padding-left: var(--bs-gutter-x, 1.75rem);
+
+    }
+
+}
+
+
+/* Md Desktop devices */
+
+@media (min-width: 768px) {
+
+    // Hide cursor
+    body {
+        cursor: none !important;
+    }
+
+    * {
+        cursor: none !important;
+    }
+
+    // Show custom cursor
+    #cursor {
+        display: block !important;
+    }
+
+}
+
+
+
+
+/* Mobile/tablet devices */
+@media (max-width: 767px) {
+
+    // Hide custom cursor
+    #cursor {
+        display: none !important;
+
+    }
+
+    //Hide form
+    #connect {
+        display: none !important;
+
+    }
+
+    //hide Video
+    #videoContainer {
+        #bgvid {
+            display: none !important;
+        }
+    }
+
+    //Hide Play/Pause Button
+    #playPauseButton {
+        display: none !important;
+    }
+
+    //Show Mobile Connect (email)
+    #connectMobile {
+        display: block !important;
+    }
+
+    #val-prop {
+
+        .display-1 {
+
+            font-weight: 400 !important;
+        }
+
+    }
+}
