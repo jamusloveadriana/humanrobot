@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanrobot</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/bdp6xub.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+</head>
+
+<body spellcheck="false">
+
+    <div id="cursor"></div>
+
+    <div id="windowContainer" class="d-flex justify-content-center align-items-center">
+        <div id="imgContainer" class="container-flex d-flex justify-content-center align-items-center">
+            <div id="textarea" class="display-3" contenteditable>Connecting...
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid" id="main">
+        <button id="playPauseButton" class="roundBtn btn btn-primary d-flex justify-content-center align-items-center">
+            <img class="play-btn" src="img/play.svg" />
+            <img class="pause-btn" src="img/pause.svg" />
+        </button>
+
+        <div class="row" id="logo-container">
+            <div class="col">
+                <img id="logo" src="img/humanrobot_white_logo.svg" />
+            </div>
+        </div>
+
+        <div class="row gx-0" id="val-prop">
+            <div class="col-xl-8 col-lg-9 col-sm-9 bl-cont">
+                <h1 class="display-1">Your tech team.</h1>
+            </div>
+        </div>
+
+        <div class="row gx-0" id="connect">
+            <div id="form-group" class="col-lg-12 bl-cont form-group">
+                <div id="connectBtn" onclick="connectBtn()">Connect</div>
+                <form name="connect" id="connectForm" class="needs-validation" action="connected.html"
+                    autocomplete="off" novalidate>
+                    <div id="yourNameContainer">
+                        <input id="yourName" class="form-control form-control-md box-hidden autoSize" type="text"
+                            placeholder="Name" maxlength="40" oninput="showBox(this.id, emailAddress.id)"
+                            onpaste="showBoxPaste(emailAddress.id)" value="" required>
+                        <div class="invalid-feedback">Your name is required.</div>
+                    </div>
+
+                    <div id="emailAddressContainer">
+                        <input id="emailAddress" type="email"
+                            class="form-control form-control-md box-hidden autoSize  mt-2" placeholder="Email Address"
+                            maxlength="60" oninput="showBox(this.id, message.id)" onpaste="showBoxPaste(message.id)"
+                            value="" required>
+                        <div class="invalid-feedback">A valid email address is required.</div>
+                    </div>
+
+
+                    <div id="messageContainer">
+                        <textarea id="message" class="form-control form-control-md box-hidden autoSize mt-2" cols="40"
+                            rows="2" placeholder="Message" oninput="showBox(this.id, messageSend.id)"
+                            onpaste="showBoxPaste(messageSend.id)" onkeyup="new do_resize(this);" required></textarea>
+                        <div class="invalid-feedback">A message is required.</div>
+                    </div>
+
+                    <div id="messageSendContainer">
+                        <input id="messageSend" type="submit" value="Send"
+                            class="btn btn-primary btn-md box-hidden mt-2"></input>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="row gx-0" id="connectMobile">
+            <a href="mailto:hello@humanrobot.com&subject=Let's%2Connect">Connect</a>
+        </div>
+    </div>
+
+    <div id="videoContainer"><video playsinline autoplay muted loop id="bgvid">
+            <source src="img/humanrobot_animated_background.mp4" type="video/mp4">
+            <!--<source src="img/humanrobot_animatd_background.webm" type="video/webm">-->
+        </video></div>
+
+    <!-- JavaScript: Bootstrap Bundle with Popper *optional -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+    <script src="js/custom.js"></script>
+
+
+</body>
+
+</html>
